@@ -89,6 +89,7 @@ public class TreeInfo {
         opname[JCTree.PLUS    - JCTree.POS] = names.fromString("+");
         opname[JCTree.MINUS   - JCTree.POS] = names.hyphen;
         opname[JCTree.MUL     - JCTree.POS] = names.asterisk;
+        opname[JCTree.POWER   - JCTree.POS] = names.fromString("**");
         opname[JCTree.DIV     - JCTree.POS] = names.slash;
         opname[JCTree.MOD     - JCTree.POS] = names.fromString("%");
     }
@@ -746,6 +747,7 @@ public class TreeInfo {
         case JCTree.MINUS: return addPrec;
         case JCTree.MUL:
         case JCTree.DIV:
+        case JCTree.POWER:
         case JCTree.MOD: return mulPrec;
         case JCTree.TYPETEST: return ordPrec;
         default: throw new AssertionError();

@@ -558,6 +558,8 @@ public class Symtab {
         enterBinop("*", longType, longType, longType, lmul);
         enterBinop("*", intType, intType, intType, imul);
 
+        enterBinop("**", doubleType, doubleType, doubleType, 0);
+        
         enterBinop("/", doubleType, doubleType, doubleType, ddiv);
         enterBinop("/", floatType, floatType, floatType, fdiv);
         enterBinop("/", longType, longType, longType, ldiv);

@@ -2831,6 +2831,19 @@ public class Lower extends TreeTranslator {
         List<Type> formals = tree.operator.type.getParameterTypes();
         JCTree lhs = tree.lhs = translate(tree.lhs, formals.head);
         switch (tree.getTag()) {
+        case JCTree.POWER:
+            Symbol math = rs.loadClass(attrEnv, names.fromString("java.lang.Math"));
+            JCIdent identifier = make.Ident(math);
+            tree.lhs = translate(tree.lhs, formals.get(0));
+            tree.rhs = translate(tree.rhs, formals.get(1));
+            List<JCExpression> arguments = List.of(tree.lhs,tree.rhs);
+            
+            result = makeCall(
+                      identifier, 
+                      names.fromString("pow"), 
+                      arguments
+            );
+            return;
         case JCTree.OR:
             if (lhs.type.isTrue()) {
                 result = lhs;

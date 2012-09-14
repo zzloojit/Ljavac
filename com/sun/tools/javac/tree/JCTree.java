@@ -297,7 +297,8 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
     public static final int PLUS = USR + 1;                  // +
     public static final int MINUS = PLUS + 1;                // -
     public static final int MUL = MINUS + 1;                 // *
-    public static final int DIV = MUL + 1;                   // /
+    public static final int POWER = MUL + 1;
+    public static final int DIV = POWER + 1;                   // /
     public static final int MOD = DIV + 1;                   // %
 
     /** Assignment operators, of type Assignop.

@@ -924,6 +924,7 @@ public class Pretty extends JCTree.Visitor {
             case JCTree.PLUS:    return "+";
             case JCTree.MINUS:   return "-";
             case JCTree.MUL:     return "*";
+            case JCTree.POWER:   return "**";
             case JCTree.DIV:     return "/";
             case JCTree.MOD:     return "%";
             default: throw new Error();

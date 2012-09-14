@@ -125,6 +125,7 @@ public enum Token {
     PLUS("+"),
     SUB("-"),
     STAR("*"),
+    POWER("**"),
     SLASH("/"),
     AMP("&"),
     BAR("|"),
