@@ -2715,6 +2715,8 @@ public class Parser {
      */
     static int optag(Token token) {
         switch (token) {
+        case POUND:
+        	return JCTree.NE2;
         case BARBAR:
             return JCTree.OR;
         case AMPAMP:

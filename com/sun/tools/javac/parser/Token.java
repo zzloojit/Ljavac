@@ -118,6 +118,7 @@ public enum Token {
     LTEQ("<="),
     GTEQ(">="),
     BANGEQ("!="),
+    POUND("#"),
     AMPAMP("&&"),
     BARBAR("||"),
     PLUSPLUS("++"),

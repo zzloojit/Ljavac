@@ -629,6 +629,13 @@ public class Symtab {
         enterBinop("!=", longType, longType, booleanType, lcmp, ifne);
         enterBinop("!=", intType, intType, booleanType, if_icmpne);
 
+        enterBinop("#", objectType, objectType, booleanType, if_acmpne);
+        enterBinop("#", booleanType, booleanType, booleanType, if_icmpne);
+        enterBinop("#", doubleType, doubleType, booleanType, dcmpl, ifne);
+        enterBinop("#", floatType, floatType, booleanType, fcmpl, ifne);
+        enterBinop("#", longType, longType, booleanType, lcmp, ifne);
+        enterBinop("#", intType, intType, booleanType, if_icmpne);
+
         enterBinop("&&", booleanType, booleanType, booleanType, bool_and);
         enterBinop("||", booleanType, booleanType, booleanType, bool_or);
     }

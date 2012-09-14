@@ -76,6 +76,7 @@ public class TreeInfo {
         opname[JCTree.AND     - JCTree.POS] = names.fromString("&&");
         opname[JCTree.EQ      - JCTree.POS] = names.fromString("==");
         opname[JCTree.NE      - JCTree.POS] = names.fromString("!=");
+        opname[JCTree.NE2     - JCTree.POS] = names.fromString("#");
         opname[JCTree.LT      - JCTree.POS] = names.fromString("<");
         opname[JCTree.GT      - JCTree.POS] = names.fromString(">");
         opname[JCTree.LE      - JCTree.POS] = names.fromString("<=");
@@ -731,6 +732,7 @@ public class TreeInfo {
         case JCTree.OR: return orPrec;
         case JCTree.AND: return andPrec;
         case JCTree.EQ:
+        case JCTree.NE2:
         case JCTree.NE: return eqPrec;
         case JCTree.LT:
         case JCTree.GT:

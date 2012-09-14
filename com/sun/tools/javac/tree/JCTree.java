@@ -287,7 +287,8 @@ public abstract class JCTree implements Tree, Cloneable, DiagnosticPosition {
     public static final int BITAND = BITXOR + 1;             // &
     public static final int EQ = BITAND + 1;                 // ==
     public static final int NE = EQ + 1;                     // !=
-    public static final int LT = NE + 1;                     // <
+    public static final int NE2 = NE + 1;
+    public static final int LT = NE2 + 1;                     // <
     public static final int GT = LT + 1;                     // >
     public static final int LE = GT + 1;                     // <=
     public static final int GE = LE + 1;                     // >=

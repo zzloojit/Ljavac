@@ -617,7 +617,7 @@ public class Scanner implements Lexer {
         case '!': case '%': case '&': case '*': case '?':
         case '+': case '-': case ':': case '<': case '=':
         case '>': case '^': case '|': case '~':
-        case '@':
+        case '@': case '#':
             return true;
         default:
             return false;

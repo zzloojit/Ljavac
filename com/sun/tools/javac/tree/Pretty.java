@@ -898,6 +898,7 @@ public class Pretty extends JCTree.Visitor {
 
     public String operatorName(int tag) {
         switch(tag) {
+        	case JCTree.NE2:	 return "#";
             case JCTree.POS:     return "+";
             case JCTree.NEG:     return "-";
             case JCTree.NOT:     return "!";
